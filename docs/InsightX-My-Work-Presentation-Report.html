@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InsightX — My Project Work and Presentation Guide</title>
+<style>
+@page { size: A4; margin: 16mm 17mm 17mm; }
+* { box-sizing: border-box; }
+body { margin:0; font: 11pt/1.48 Arial, Helvetica, sans-serif; color:#1e2a25; }
+h1,h2,h3,p { margin-top:0; }
+h1 { font-size:30pt; line-height:1.08; letter-spacing:-.7pt; color:#153c2c; margin:8mm 0 5mm; }
+h2 { font-size:19pt; line-height:1.2; color:#153c2c; margin:0 0 4mm; }
+h3 { font-size:12pt; color:#245c3e; margin:4mm 0 1mm; }
+p { margin:0 0 3mm; }
+ul,ol { margin:1mm 0 4mm; padding-left:6mm; }
+li { margin:1mm 0; }
+.page { min-height:263mm; position:relative; page-break-after:always; padding-bottom:12mm; }
+.page:last-child { page-break-after:auto; }
+.eyebrow { color:#5b834c; text-transform:uppercase; letter-spacing:1.5pt; font-size:9pt; font-weight:bold; }
+.sub { font-size:15pt; color:#4d6257; max-width:155mm; }
+.cover { background:linear-gradient(145deg,#f4f8f0,#e7f1e5); padding:20mm; border-radius:5mm; min-height:215mm; display:flex; flex-direction:column; justify-content:space-between; }
+.pill { display:inline-block; border-radius:20px; padding:2mm 4mm; background:#d9ebd0; color:#285239; font-size:9pt; font-weight:bold; }
+.highlight { background:#f0f6ec; border-left:4px solid #84b85a; padding:4mm 5mm; border-radius:0 3mm 3mm 0; margin:4mm 0; }
+.quote { font-size:13pt; line-height:1.5; color:#183d2a; background:#f1f6ee; border-radius:4mm; padding:7mm; margin:4mm 0; }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:4mm; margin:4mm 0; }
+.card { background:#f5f7f3; border:1px solid #e0e8dc; border-radius:3mm; padding:4mm; }
+.card p:last-child { margin-bottom:0; }
+.small { font-size:9pt; color:#5a6860; }
+.shot { width:100%; height:auto; border:1px solid #dce4db; border-radius:2mm; }
+.shot-wrap { text-align:center; margin:3mm 0; }
+.caption { font-size:9pt; color:#5b675e; text-align:center; margin-top:2mm; }
+.steps { counter-reset:step; list-style:none; padding:0; }
+.steps li { counter-increment:step; display:flex; gap:3mm; margin:3mm 0; }
+.steps li::before { content:counter(step); background:#dcedd2; color:#275438; font-weight:bold; border-radius:50%; flex:none; width:7mm;height:7mm; text-align:center; line-height:7mm; }
+.answer { font-weight:bold; color:#24513a; }
+.footer { position:absolute; bottom:0; left:0; right:0; border-top:1px solid #dce4dc; padding-top:2mm; color:#77827a; font-size:8pt; display:flex; justify-content:space-between; }
+.meta { color:#607168; font-size:10pt; }
+@media screen { body { background:#e9ede8; } .page { width:210mm; margin:10mm auto; padding:16mm 17mm 17mm; background:#fff; box-shadow:0 2px 14px #0002; } }
+</style></head>
+<body>
+<section class="page">
+ <div class="cover">
+  <div><span class="pill">STUDENT PRESENTATION GUIDE</span><div class="eyebrow" style="margin-top:14mm">INSIGHTX · PROJECT CONTRIBUTION</div>
+   <h1>My work on<br>InsightX</h1>
+   <p class="sub">A simple report to help me explain what I built, how it looks, and how it helps people understand their data.</p>
+  </div>
+  <div><p class="highlight"><b>In one sentence:</b> I helped build InsightX into a tool where people can explore data, check for problems, spot patterns, and share what they learn. I also worked on its dark green theme.</p>
+   <p class="meta"><b>Project:</b> InsightX &nbsp; · &nbsp; <b>Prepared:</b> 22 October 2026<br><b>Basis:</b> project presentation guide, current application, and repository commit history</p>
+  </div>
+ </div>
+ <div class="footer"><span>InsightX · My project work</span><span>1</span></div>
+</section>
+
+<section class="page">
+ <div class="eyebrow">01 · What the project does</div><h2>From a raw file to useful findings</h2>
+ <p>InsightX is a browser-based data workspace. A user opens a CSV, JSON, or Excel file, then explores its rows and columns. They can narrow the view, check for missing or repeated values, compare numbers, and export a useful result.</p>
+ <div class="highlight"><b>The user journey:</b> Open a file → focus on useful rows → check data quality → look for patterns → export or save.</div>
+ <h3>My main areas of contribution</h3>
+ <div class="grid">
+  <div class="card"><h3>Explore the table</h3><p>Search, sorting, filters, page controls, and column selection help people find the rows they need. Users can also edit cells before exporting.</p></div>
+  <div class="card"><h3>Understand data quality</h3><p>Column profiles summarize missing and filled cells, completeness, distinct and frequent values, plus numeric or date ranges.</p></div>
+  <div class="card"><h3>See and share patterns</h3><p>Charts and simple signals help people notice comparisons or possible outliers. Exports include cleaned data, analysis reports, chart files, and the printable Insight Brief.</p></div>
+  <div class="card"><h3>Theme and ease of use</h3><p>I worked on the dark forest green theme and improved parts of the screen so the app feels consistent and easier to use. I also worked on loading messages, error handling, navigation, documentation, and the first account screens.</p></div>
+ </div>
+ <h3>Why this is useful</h3><p>A person can ask questions such as “Which region had higher sales?” or “Which column has missing information?” and inspect the answer without writing code or scanning every row manually.</p>
+ <div class="footer"><span>InsightX · My project work</span><span>2</span></div>
+</section>
+
+<section class="page">
+ <div class="eyebrow">02 · Screenshot walkthrough</div><h2>The workspace in action</h2>
+ <p>This screenshot shows the current application with its built-in 62-row sales sample open. It contains product, region, date, units, revenue, and status fields.</p>
+ <div class="shot-wrap"><img class="shot" src="presentation-assets/02-overview.png" alt="InsightX workspace showing the sample dataset, chart, and data quality summary"><div class="caption">Figure 1. The sample data is open. The chart compares values, while the profile cards summarize columns.</div></div>
+ <h3>What to point out</h3><p>The sample contains product, region, date, units, revenue, and status. The controls above the chart let a user choose what to compare and how to group it.</p>
+ <p class="small">The sales values are an example dataset for demonstrating the interface; they are not a claim about real business results.</p>
+ <div class="footer"><span>InsightX · My project work</span><span>3</span></div>
+</section>
+
+<section class="page">
+ <div class="eyebrow">02 · Screenshot walkthrough · continued</div><h2>Profiles, signals, and rows</h2>
+ <p>The lower part of the workspace connects the summary to the actual records. Filters can narrow the rows; the overview, profiles, and chart then help explain the selected view.</p>
+ <div class="shot-wrap"><img class="shot" src="presentation-assets/03-quality-table.png" alt="InsightX column profiles, overview counts, pattern signals, filters, and data table"><div class="caption">Figure 2. Column profiles, overview counts, possible signals, filter controls, and sample rows.</div></div>
+ <div class="highlight"><b>Easy explanation:</b> “I can use a filter to focus the table, then use the profile and chart to understand the rows I kept.”</div>
+ <div class="footer"><span>InsightX · My project work</span><span>4</span></div>
+</section>
+
+<section class="page">
+ <div class="eyebrow">03 · How my features work</div><h2>Simple explanation of the main ideas</h2>
+ <div class="card"><h3>Filters focus the data</h3><p>A filter is a condition applied to rows. For example, “Region is West” keeps matching rows. More than one condition can be combined: <b>Match all</b> means every rule must match; <b>Match any</b> means at least one must match. Filtering changes the current view, not the original file.</p></div>
+ <div class="card"><h3>Profiles explain data quality</h3><p>For each column, the app counts filled and empty cells, estimates completeness, counts different values, and summarizes numeric or date values. The profile can describe either the whole dataset or the rows currently shown.</p></div>
+ <div class="card"><h3>Charts help compare values</h3><p>A chart can compare a numeric measure by category, such as revenue by product, using a total or average. Date charts can group by day, month, or year. The chart follows the current filtered rows.</p></div>
+ <div class="card"><h3>Signals point to things to review</h3><p>The app can point out a column with many missing values, a common category, or a possible numeric outlier. An outlier is a statistical flag for human review, not proof that the value is wrong.</p></div>
+ <div class="card"><h3>The Insight Brief communicates the view</h3><p>The printable brief summarizes counts, signals, active filters, chart information, and column quality. It is made in the browser and leaves out the source data rows, so the reader can understand the analysis without receiving the whole dataset.</p></div>
+ <div class="footer"><span>InsightX · My project work</span><span>5</span></div>
+</section>
+
+<section class="page">
+ <div class="eyebrow">04 · What I worked on</div><h2>My contribution and the team’s contribution</h2>
+ <p>The repository history and the supplied presentation guide show contributions under the Git author name <b>damnsunnyy</b>. Commit history helps identify the work associated with that account; it does not prove who typed every line or capture every informal contribution.</p>
+ <h3>Work associated with my commits</h3>
+ <ul><li>Initial CSV preview, search, sortable columns, and early data exploration features.</li><li>Interactive filters and column selection; chart summaries and downloadable column reports.</li><li>The dark forest theme and usability improvements, including import progress, preserving already loaded data after a failed import, clipboard export, and better navigation.</li><li>Filtered profiles, incomplete-row export, frequent-value highlights, flexible filters, and the printable Insight Brief.</li><li>Initial registration/login API and screens, account saving, and related documentation.</li><li>Project and deployment documentation.</li></ul>
+ <h3>Work clearly attributed to teammates in history</h3>
+ <ul><li>Excel workbook import and date-grouped trend charts.</li><li>Several analysis additions such as JSON import/export, profile enhancements, filtered-data insights, and browser-saved views.</li><li>Much of the later backend dataset storage, profiling, validation, and account integration work.</li></ul>
+ <div class="highlight"><b>Accurate way to say it:</b> “This is a team project. I worked on the dark forest theme, data exploration tools, reports, ease of use, documentation, and the first account features. My teammates also worked on important import, analysis, backend, and integration features.”</div>
+ <p class="small">This wording is intentionally based on commit authorship and the presentation guide. If your instructor uses a different contribution record, follow that record.</p>
+ <div class="footer"><span>InsightX · My project work</span><span>6</span></div>
+</section>
+
+<section class="page">
+ <div class="eyebrow">05 · Presentation notes</div><h2>Ready-to-say explanation</h2>
+ <div class="quote">“My project is InsightX. It helps people explore spreadsheet data without writing code. My work included the dark forest theme and tools to search, sort, and filter data. I also worked on data summaries, charts, reports, and making the app easier to use. For example, the app can show missing information and compare sales by product. The aim is to help people understand their data more easily. This is a team project, and my teammates worked on other parts such as file importing and the backend.”</div>
+ <h3>Simple live demo (about one minute)</h3>
+ <ol class="steps"><li>Open the sample sales dataset.</li><li>Point out its rows and columns and explain that search and filters focus the view.</li><li>Show the chart and say it compares values across products or dates.</li><li>Point to the profile cards and explain missing values and completeness.</li><li>Show the “Download Insight Brief” control and explain that it summarizes the current view without including the original rows.</li></ol>
+ <h3>Three points to remember</h3><p><b>The theme makes the app comfortable to use. Filters help find the right rows. Charts and reports make the results easier to understand.</b></p>
+ <div class="footer"><span>InsightX · My project work</span><span>7</span></div>
+</section>
+
+<section class="page">
+ <div class="eyebrow">06 · Questions your instructor may ask</div><h2>Short answers to keep handy</h2>
+ <h3>Where does normal analysis happen?</h3><p class="answer">In the browser. Saving a dataset to an account is an explicit action that sends it to the backend.</p>
+ <h3>Does an outlier mean the data is wrong?</h3><p class="answer">No. It is a value that is unusually far from the others by a common statistical rule. A person should check its context.</p>
+ <h3>Why show both full-data and filtered profiles?</h3><p class="answer">The whole file may look complete while one selected group has missing values. The two views help reveal that difference.</p>
+ <h3>What is the Insight Brief?</h3><p class="answer">A printable summary of the current analysis: counts, signals, filters, chart summary, and column quality. It does not include the raw dataset rows.</p>
+ <h3>What would you improve next?</h3><p class="answer">“I would try the workflow with more kinds of datasets and users, then improve any confusing steps they find.”</p>
+ <h3>Which work is yours?</h3><p class="answer">“I worked on the dark forest theme, data exploration features, reports, interface improvements, documentation, and the first account features. The full application is shared team work.”</p>
+ <div class="highlight"><b>If you forget everything else:</b> explain the user problem, show one filter, point to one profile or chart, and describe the report in your own words.</div>
+ <div class="footer"><span>InsightX · My project work</span><span>8</span></div>
+</section>
+</body></html>
